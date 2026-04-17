@@ -1,0 +1,25 @@
+<main class="page">
+  <section class="card">
+    <h1>App Base .NET + Angular + NGXS</h1>
+    <p>Contatore gestito con NGXS e chiamata a endpoint backend ASP.NET Core.</p>
+
+    <div class="actions">
+      <button type="button" (click)="increment()">Incrementa contatore</button>
+      <button type="button" (click)="loadStatus()">Leggi stato API</button>
+    </div>
+
+    <div class="result">
+      <p><strong>Count:</strong> {{ count$ | async }}</p>
+      <p><strong>Messaggio API:</strong> {{ (apiMessage$ | async) || '-' }}</p>
+      <p><strong>Server UTC:</strong> {{ (serverTime$ | async) || '-' }}</p>
+      @if (loading$ | async) {
+        <p class="info">Caricamento in corso...</p>
+      }
+      @if (error$ | async; as error) {
+        <p class="error">{{ error }}</p>
+      }
+    </div>
+  </section>
+</main>
+
+<router-outlet />

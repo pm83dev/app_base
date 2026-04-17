@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-backend",
+      "type": "shell",
+      "command": "dotnet build",
+      "options": { "cwd": "${workspaceFolder}/backend/AppBase.Api" },
+      "group": "build",
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "run-backend",
+      "type": "shell",
+      "command": "dotnet run --project backend/AppBase.Api/AppBase.Api.csproj",
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "dotnet",
+        "pattern": { "regexp": "." },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "dotnet run",
+          "endsPattern": "Now listening on:"
+        }
+      }
+    },
+    {
+      "label": "start-angular",
+      "type": "shell",
+      "command": "ng serve",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "angular",
+        "pattern": { "regexp": "^ERROR" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Building\\.\\.\\.",
+          "endsPattern": "compiled successfully|Application bundle generation complete"
+        }
+      }
+    }
+  ]
+}
+
