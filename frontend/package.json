@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "backend": "dotnet run --project backend",
-    "frontend": "ng serve --proxy-config proxy.conf.json",
+    "frontend": "ng serve --proxy-config proxy.conf.js",
     "dev": "npm-run-all --parallel backend frontend"
   },
   "private": true,

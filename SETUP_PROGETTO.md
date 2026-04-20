@@ -315,7 +315,7 @@ Per sviluppo veloce con hot reload:
 - `ng serve`
 
 Proxy API:
-- `frontend/proxy.conf.json` punta a `https://localhost:7236`.
+- `frontend/proxy.conf.js` punta a `https://localhost:7236`.
 
 ### 5.4 Build frontend verso backend (quando vuoi test integrato)
 

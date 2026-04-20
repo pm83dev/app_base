@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
+import { environment } from '../../environments/environment';
 export interface ApiStatusResponse {
   message: string;
   serverTime: string;
@@ -9,10 +9,9 @@ export interface ApiStatusResponse {
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-
   constructor(private http: HttpClient) {}
 
   getStatus(): Observable<ApiStatusResponse> {
-    return this.http.get<ApiStatusResponse>('/api/status');
+    return this.http.get<ApiStatusResponse>(`${environment.API_URL}status`);
   }
 }
