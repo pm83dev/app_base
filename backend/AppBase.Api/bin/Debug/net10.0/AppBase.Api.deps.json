@@ -9,6 +9,7 @@
       "AppBase.Api/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "10.0.5",
+          "Microsoft.AspNetCore.SpaProxy": "10.0.5",
           "Swashbuckle.AspNetCore": "10.1.7"
         },
         "runtime": {
@@ -21,6 +22,14 @@
         },
         "runtime": {
           "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "10.0.5.0",
+            "fileVersion": "10.0.526.15411"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.SpaProxy/10.0.5": {
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.SpaProxy.dll": {
             "assemblyVersion": "10.0.5.0",
             "fileVersion": "10.0.526.15411"
           }
@@ -85,6 +94,13 @@
       "sha512": "sha512-vTcxIfOPyfFbYk1g8YcXJfkMnlEWVkSnnjxcZLy60zgwiHMRf2SnZR+9E4HlpwKxgE3yfKMOti8J6WfKuKsw6w==",
       "path": "microsoft.aspnetcore.openapi/10.0.5",
       "hashPath": "microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.SpaProxy/10.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q9mjn2xgPb6mnNJwcyoGhFvnNH10KL8ok6t7C02QoxUSf1utzzbd9LnCfk2dQy7z22+pyYRBz1Ip2xfT1PW2TQ==",
+      "path": "microsoft.aspnetcore.spaproxy/10.0.5",
+      "hashPath": "microsoft.aspnetcore.spaproxy.10.0.5.nupkg.sha512"
     },
     "Microsoft.OpenApi/2.4.1": {
       "type": "package",

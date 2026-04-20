@@ -14,7 +14,8 @@
       },
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:7236;http://localhost:5000"
+        "ASPNETCORE_URLS": "https://localhost:7236;http://localhost:5000",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
       },
       "serverReadyAction": {
         "action": "openExternally",

@@ -24,6 +24,21 @@
           "build/Microsoft.AspNetCore.OpenApi.targets": {}
         }
       },
+      "Microsoft.AspNetCore.SpaProxy/10.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/Microsoft.AspNetCore.SpaProxy.targets": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/10.0.0": {
         "type": "package",
         "build": {
@@ -133,6 +148,21 @@
         "lib/net10.0/Microsoft.AspNetCore.OpenApi.xml",
         "microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.SpaProxy/10.0.5": {
+      "sha512": "q9mjn2xgPb6mnNJwcyoGhFvnNH10KL8ok6t7C02QoxUSf1utzzbd9LnCfk2dQy7z22+pyYRBz1Ip2xfT1PW2TQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.spaproxy/10.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/Microsoft.AspNetCore.SpaProxy.targets",
+        "lib/net10.0/Microsoft.AspNetCore.SpaProxy.dll",
+        "microsoft.aspnetcore.spaproxy.10.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/10.0.0": {
@@ -494,6 +524,7 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.AspNetCore.OpenApi >= 10.0.5",
+      "Microsoft.AspNetCore.SpaProxy >= 10.0.5",
       "Swashbuckle.AspNetCore >= 10.1.7"
     ]
   },
@@ -503,11 +534,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DEV\\SHOWROOM_APP\\app_base\\backend\\AppBase.Api\\AppBase.Api.csproj",
+      "projectUniqueName": "D:\\Projects\\SHOWROOM_APP\\app_base\\backend\\AppBase.Api\\AppBase.Api.csproj",
       "projectName": "AppBase.Api",
-      "projectPath": "C:\\DEV\\SHOWROOM_APP\\app_base\\backend\\AppBase.Api\\AppBase.Api.csproj",
+      "projectPath": "D:\\Projects\\SHOWROOM_APP\\app_base\\backend\\AppBase.Api\\AppBase.Api.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\DEV\\SHOWROOM_APP\\app_base\\backend\\AppBase.Api\\obj\\",
+      "outputPath": "D:\\Projects\\SHOWROOM_APP\\app_base\\backend\\AppBase.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -541,6 +572,10 @@
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[10.0.5, )"
+          },
+          "Microsoft.AspNetCore.SpaProxy": {
             "target": "Package",
             "version": "[10.0.5, )"
           },

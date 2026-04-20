@@ -9,7 +9,7 @@ public class TestController : ControllerBase
     {
         return Ok(new
         {
-            message = "ok",
+            message = "ok, server is running",
             serverTime = DateTime.UtcNow
         });
     }

@@ -24,23 +24,6 @@
           "endsPattern": "Now listening on:"
         }
       }
-    },
-    {
-      "label": "start-angular",
-      "type": "shell",
-      "command": "ng serve",
-      "options": { "cwd": "${workspaceFolder}/frontend" },
-      "isBackground": true,
-      "problemMatcher": {
-        "owner": "angular",
-        "pattern": { "regexp": "^ERROR" },
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": "Building\\.\\.\\.",
-          "endsPattern": "compiled successfully|Application bundle generation complete"
-        }
-      }
     }
   ]
 }
-

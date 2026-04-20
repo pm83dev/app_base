@@ -86,7 +86,8 @@ Trade-off da conoscere:
 1. Angular output path verso `wwwroot`.
 2. Backend con `UseDefaultFiles`, `UseStaticFiles`, `MapFallbackToFile("index.html")`.
 3. Swagger abilitato in Development.
-4. Task VS Code per build/run rapidi.
+4. SpaProxy per avvio automatico del frontend in Development.
+5. Task VS Code per build/run rapidi del backend.
 
 Perche:
 - riduci errori manuali durante sviluppo e publish
@@ -137,7 +138,7 @@ Verifica rapida:
 - `.vscode/launch.json`
   - debug backend
 - `.vscode/tasks.json`
-  - task build/run
+  - task build/run backend
 
 ## 4. Configurazioni importanti applicate
 
@@ -193,7 +194,34 @@ Target MSBuild:
 Effetto:
 - `dotnet publish` prepara anche la SPA senza passaggi manuali aggiuntivi.
 
-### 4.5 TS warning TS6 (rootDir)
+### 4.5 SpaProxy per sviluppo locale con F5
+
+File: `backend/AppBase.Api/AppBase.Api.csproj`
+
+Proprieta chiave:
+- `SpaRoot = ..\\..\\frontend\\`
+- `SpaProxyServerUrl = http://localhost:4200`
+- `SpaProxyLaunchCommand = npm start`
+- `SpaProxyWorkingDirectory = $(SpaRoot)`
+
+Pacchetto:
+- `Microsoft.AspNetCore.SpaProxy` 10.0.5
+
+File: `backend/AppBase.Api/Properties/launchSettings.json`
+
+Variabile ambiente in Development:
+- `ASPNETCORE_HOSTINGSTARTUPASSEMBLIES = Microsoft.AspNetCore.SpaProxy`
+
+File: `.vscode/launch.json`
+
+Variabile ambiente aggiunta alla configurazione `Launch Backend`:
+- `ASPNETCORE_HOSTINGSTARTUPASSEMBLIES = Microsoft.AspNetCore.SpaProxy`
+
+Effetto:
+- avviando il backend in debug (F5) il frontend Angular viene avviato automaticamente tramite `npm start`
+- non e necessario avviare manualmente `ng serve` da task root
+
+### 4.6 TS warning TS6 (rootDir)
 
 File: `frontend/tsconfig.app.json`
 
@@ -203,7 +231,7 @@ Impostato:
 Motivo:
 - Rimuovere warning TS6 sul common source directory.
 
-### 4.6 NGXS integrato nel progetto
+### 4.7 NGXS integrato nel progetto
 
 File coinvolti:
 - `frontend/package.json` -> dipendenza `@ngxs/store`
@@ -214,7 +242,7 @@ Uso attuale:
 - gestione contatore
 - chiamata API `/api/status` con loading ed error handling nello state
 
-### 4.7 Esempio rapido NGXS (Action + Selector)
+### 4.8 Esempio rapido NGXS (Action + Selector)
 
 Esempio minimo da replicare quando aggiungi una nuova feature stato.
 
