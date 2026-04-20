@@ -1,0 +1,27 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+
+# Logs
+*.log
+
+# Visual Studio / Rider
+.vs/
+*.DotSettings.user
+
+# VS Code workspace-local artifacts
+.vscode/*.code-workspace
+
+# Frontend generated outputs (extra safety at repo root)
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+
+# OS files
+.DS_Store
+Thumbs.db
