@@ -6,6 +6,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add dbContext for Entity Framework Core (assuming you have an AppDbContext defined in your project)
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 // Configure CORS to allow requests from the Angular frontend running on http://localhost:4200
 builder.Services.AddCors(options =>
 {

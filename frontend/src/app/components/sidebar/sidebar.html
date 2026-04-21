@@ -1,26 +1,26 @@
 <div>
-  <h2 class="h5">Navigation</h2>
+  <h2 class="h5">Menu</h2>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <button class="nav-link" style="cursor: pointer" (click)="navigateTo('')">
+      <button class="nav-link" [class.active]="isActive('')" style="cursor: pointer" (click)="navigateTo('')">
         <i class="bi bi-house me-2"></i>
         Home
       </button>
     </li>
     <li class="nav-item">
-      <button class="nav-link" style="cursor: pointer" (click)="navigateTo('data')">
+      <button class="nav-link" [class.active]="isActive('data')" style="cursor: pointer" (click)="navigateTo('data')">
         <i class="bi bi-table me-2"></i>
         Data
       </button>
     </li>
     <li class="nav-item">
-      <button class="nav-link" style="cursor: pointer" (click)="navigateTo('about')">
+      <button class="nav-link" [class.active]="isActive('about')" style="cursor: pointer" (click)="navigateTo('about')">
         <i class="bi bi-info-circle me-2"></i>
         About
       </button>
     </li>
     <li class="nav-item">
-      <button class="nav-link" style="cursor: pointer" (click)="navigateTo('contact')">
+      <button class="nav-link" [class.active]="isActive('contact')" style="cursor: pointer" (click)="navigateTo('contact')">
         <i class="bi bi-envelope me-2"></i>
         Contact
       </button>

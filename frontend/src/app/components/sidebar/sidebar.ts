@@ -11,7 +11,14 @@ export class Sidebar {
   constructor(private readonly router: Router) {}
 
   navigateTo(path: string): void {
-    // Implementa la logica di navigazione qui, ad esempio usando il Router di Angular
     this.router.navigate([path]);
+  }
+
+  isActive(path: string): boolean {
+    // Per la home, path vuoto deve corrispondere a '' o '/'
+    if (path === '') {
+      return this.router.url === '/' || this.router.url === '';
+    }
+    return this.router.url.startsWith('/' + path);
   }
 }

@@ -12,6 +12,35 @@ Per una UI moderna e modulare, il layout generale prevede:
    - `Header` (src/app/components/header)
    - `Sidebar` (src/app/components/sidebar)
    - `Layout` (src/app/components/layout)
+
+**Evidenziare la pagina selezionata nella sidebar**
+
+Per evidenziare la voce attiva nella sidebar:
+
+1. Nel componente Sidebar, aggiungi un metodo `isActive(path: string)` che confronta la route attuale (`router.url`).
+2. Nel template sidebar.html, aggiungi `[class.active]="isActive('nome-path')"` al pulsante relativo.
+3. In sidebar.scss, personalizza `.nav-link.active` per lo stile evidenziato.
+
+Esempio:
+
+```html
+<button class="nav-link" [class.active]="isActive('data')" ...>Data</button>
+```
+
+```ts
+isActive(path: string): boolean {
+  return this.router.url.startsWith('/' + path);
+}
+```
+
+```scss
+.nav-link.active {
+  background: #0d6efd;
+  color: #fff;
+}
+```
+
+---
 2. In `Layout`, inserisci:
 
 ```html
