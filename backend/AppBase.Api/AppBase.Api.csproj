@@ -16,6 +16,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../AppBase.factory/AppBase.factory.csproj" />
+    <ProjectReference Include="../AppBase.repository/AppBase.repository.csproj" />
+  </ItemGroup>
+
+
   <Target Name="BuildFrontendForPublish" BeforeTargets="Publish">
     <Exec WorkingDirectory="..\..\frontend" Command="npm install" />
     <Exec WorkingDirectory="..\..\frontend" Command="npm run build -- --configuration production" />
