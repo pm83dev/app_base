@@ -31,6 +31,12 @@ Per una UI moderna e modulare, il layout generale prevede:
 </div>
 ```
 
+
+
+```
+
+---
+
 3. Imposta il routing in `app.routes.ts`:
 
 ```ts
@@ -479,5 +485,27 @@ Nota Windows:
 
 ## 11. BOOTSTRAP
 
-per installare bootstrap a livello di progetto eseguire <npm install bootstrap> 
-e in style scss dell'app aggiungere: <@import "bootstrap/dist/css/bootstrap.min.css";>
+per installare bootstrap a livello di progetto eseguire 
+
+'''bash
+npm install bootstrap 
+'''
+
+e in style scss dell'app aggiungere: 
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+### 0.x Icone Bootstrap
+
+Per usare le icone nella sidebar e in tutta l'app, aggiungi Bootstrap Icons:
+
+1. Installa la libreria:
+
+```bash
+npm install bootstrap-icons
+```
+
+2. Importa il CSS in `src/styles.scss` (dopo Bootstrap):
+
+```scss
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";

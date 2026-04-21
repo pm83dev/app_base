@@ -3,11 +3,11 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter } from '@angular/router';
 import { provideStore } from '@ngxs/store';
 import { routes } from './app.routes';
-import { CounterState } from './state/counter.state';
 import { Sidebar } from './components/sidebar/sidebar';
+import { CounterState } from './state/counter.state';
 
 //components
-import { Home } from './components/home/home';
+import { Home } from './components/pages/home/home';
 
 import { Layout } from './components/layout/layout';
 
