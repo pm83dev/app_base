@@ -8,5 +8,7 @@ public class AppDbContext : DbContext
     }
 
     // Define DbSet properties for your entities here
+    // Example:
     // public DbSet<YourEntity> YourEntities { get; set; }
+    public DbSet<Data> Data { get; set; }
 }
