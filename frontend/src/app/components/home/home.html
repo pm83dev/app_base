@@ -1,0 +1,36 @@
+<main class="container my-4">
+  <section class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h1 class="card-title">App Base .NET + Angular + NGXS</h1>
+      <p class="card-text">Contatore gestito con NGXS e chiamata a endpoint backend ASP.NET Core.</p>
+
+      <div class="d-flex gap-2 mb-3">
+        <button type="button" class="btn btn-primary" (click)="increment()">Incrementa contatore</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="loadStatus()">Leggi stato API</button>
+      </div>
+
+      <div class="result">
+        <p><strong>Count:</strong> {{ count$ | async }}</p>
+        <p><strong>Messaggio API:</strong> {{ (apiMessage$ | async) || '-' }}</p>
+        <p><strong>Server UTC:</strong> {{ (serverTime$ | async) || '-' }}</p>
+        @if (loading$ | async) {
+          <div class="alert alert-info py-2">Caricamento in corso...</div>
+        }
+        @if (error$ | async; as error) {
+          <div class="alert alert-danger py-2">{{ error }}</div>
+        }
+      </div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-body">
+      <h2 class="card-title">Struttura del progetto</h2>
+      <p class="card-text">Il progetto è organizzato in due aree principali: <code>backend</code> e <code>frontend</code>.</p>
+      <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item"><strong>backend:</strong> contiene un'app ASP.NET Core Web API che espone endpoint per gestire il contatore e fornire informazioni sullo stato del server.</li>
+        <li class="list-group-item"><strong>frontend:</strong> contiene un'app Angular che consuma gli endpoint del backend, gestisce lo stato con NGXS e presenta l'interfaccia utente.</li>
+      </ul>
+      <p class="card-text">Il backend è configurato per consentire le richieste CORS dal frontend, facilitando lo sviluppo e il testing locale.</p>
+    </div>
+  </section>
+</main>

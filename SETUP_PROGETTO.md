@@ -1,3 +1,63 @@
+### 0.8 Layout generale: sidebar, header, contenuto dinamico
+
+Per una UI moderna e modulare, il layout generale prevede:
+
+- **Header** fisso in alto
+- **Sidebar** laterale
+- **Sezione centrale** che cambia in base alla pagina (routing)
+
+#### Struttura consigliata
+
+1. Crea i componenti standalone:
+   - `Header` (src/app/components/header)
+   - `Sidebar` (src/app/components/sidebar)
+   - `Layout` (src/app/components/layout)
+2. In `Layout`, inserisci:
+
+```html
+<!-- layout.html -->
+<div class="d-flex flex-column min-vh-100">
+  <header class="bg-primary text-white p-3">
+    <h1 class="h4 m-0">App Base Demo</h1>
+  </header>
+  <div class="d-flex flex-grow-1">
+    <nav class="bg-light border-end p-3" style="width: 220px;">
+      <app-sidebar></app-sidebar>
+    </nav>
+    <main class="flex-grow-1 p-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+```
+
+3. Imposta il routing in `app.routes.ts`:
+
+```ts
+import { Layout } from './components/layout/layout';
+import { Home } from './components/home/home';
+
+export const routes: Routes = [
+  {
+    path: '',
+    component: Layout,
+    children: [
+      { path: '', component: Home },
+      // altre pagine qui
+    ],
+  },
+];
+```
+
+4. In `app.config.ts` aggiungi Layout, Sidebar (e Header se serve) ai provider.
+
+5. In `app.html` lascia solo `<router-outlet />`.
+
+**Risultato:**
+
+- Header e sidebar sono sempre visibili
+- Il contenuto centrale cambia in base alla pagina (route)
+- Layout responsive e facilmente estendibile
 # Setup Progetto - AppBase (.NET 10 + Angular, architettura unica)
 
 Questo documento descrive la sequenza completa di preparazione, esecuzione e pubblicazione del progetto.
@@ -416,3 +476,8 @@ Nota Windows:
 - Se vuoi solo API in debug: avvia backend direttamente.
 - Se vuoi UX frontend rapida durante coding: usa `ng serve`.
 - Per test realistico pre-release: usa frontend buildato in `wwwroot` servito dal backend.
+
+## 11. BOOTSTRAP
+
+per installare bootstrap a livello di progetto eseguire <npm install bootstrap> 
+e in style scss dell'app aggiungere: <@import "bootstrap/dist/css/bootstrap.min.css";>
