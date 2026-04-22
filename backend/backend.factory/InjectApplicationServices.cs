@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace AppBase.factory;
+namespace backend.factory;
 
 public static class InjectAppServices
 {

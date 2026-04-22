@@ -1,7 +1,7 @@
 <Solution>
   <Folder Name="/backend/">
-    <Project Path="backend/AppBase.Api/AppBase.Api.csproj" />
-    <Project Path="backend/AppBase.factory/AppBase.factory.csproj" />
-    <Project Path="backend/AppBase.repository/AppBase.repository.csproj" />
+    <Project Path="backend/backend.Api/backend.Api.csproj" />
+    <Project Path="backend/backend.factory/backend.factory.csproj" />
+    <Project Path="backend/backend.repository/backend.repository.csproj" />
   </Folder>
 </Solution>

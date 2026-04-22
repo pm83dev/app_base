@@ -1,4 +1,4 @@
-
+using backend.repository.Model;
 using Microsoft.EntityFrameworkCore;
 
 public class AppDbContext : DbContext

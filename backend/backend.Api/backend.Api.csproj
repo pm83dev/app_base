@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../AppBase.factory/AppBase.factory.csproj" />
-    <ProjectReference Include="../AppBase.repository/AppBase.repository.csproj" />
+    <ProjectReference Include="../backend.factory/backend.factory.csproj" />
+    <ProjectReference Include="../backend.repository/backend.repository.csproj" />
   </ItemGroup>
 
 

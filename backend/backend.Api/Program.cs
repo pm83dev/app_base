@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using AppBase.factory;
+using backend.factory;
 
 // Program.cs - Entry point for the ASP.NET Core Web API application
 var builder = WebApplication.CreateBuilder(args);
