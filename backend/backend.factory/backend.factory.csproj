@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../backend.repository/backend.repository.csproj" />
+    <ProjectReference Include="../backend.EventManager/backend.EventManager.csproj" />
   </ItemGroup>
 
   <ItemGroup>

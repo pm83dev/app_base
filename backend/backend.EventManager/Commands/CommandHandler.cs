@@ -15,16 +15,12 @@ namespace backend.EventManager.Commands
 
         public async Task HandleCreateAsync(TEntity entity)
         {
-            // Verifica se l'ID è vuoto (guid zero), in tal caso generane uno nuovo
-            if (entity.Id == Guid.Empty)
-            {
-                entity.Id = Guid.NewGuid();  // Genera un nuovo GUID per la creazione
-            }
+            
 
             // Crea un evento di creazione con l'ID appena assegnato
             var createdEvent = new CreatedEvent(entity)
             {
-                StreamId = entity.Id  // Imposta il GUID appena generato come StreamId
+                StreamId = entity.Id ?? Guid.NewGuid()  // Imposta il GUID appena generato come StreamId
             };
 
             var aggregateRoot = new AggregateRoot.AggregateRoot();
@@ -45,7 +41,7 @@ namespace backend.EventManager.Commands
         public async Task HandleUpdateAsync(TEntity entity)
         {
             // Usa il GUID esistente dell'entità come StreamId
-            var updatedEvent = new UpdatedEvent(entity.Id, entity);  // Passa l'ID dell'entità per lo StreamId
+            var updatedEvent = new UpdatedEvent(entity.Id ?? Guid.NewGuid(), entity);  // Passa l'ID dell'entità per lo StreamId
 
             var aggregateRoot = new AggregateRoot.AggregateRoot();
 
@@ -65,7 +61,7 @@ namespace backend.EventManager.Commands
         public async Task HandleDeleteAsync(TEntity entity)
         {
             // Crea un evento di cancellazione con l'ID dell'entità e i dati di cancellazione
-            var deletedEvent = new DeletedEvent(entity.Id, entity);  // Passa l'ID dell'entità per lo StreamId
+            var deletedEvent = new DeletedEvent(entity.Id ?? Guid.NewGuid(), entity);  // Passa l'ID dell'entità per lo.StreamId
 
             var aggregateRoot = new AggregateRoot.AggregateRoot();
 
