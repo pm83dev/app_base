@@ -3,5 +3,6 @@
     <Project Path="backend/backend.Api/backend.Api.csproj" />
     <Project Path="backend/backend.factory/backend.factory.csproj" />
     <Project Path="backend/backend.repository/backend.repository.csproj" />
+    <Project Path="backend/backend.EventManager/backend.EventManager.csproj" />
   </Folder>
 </Solution>

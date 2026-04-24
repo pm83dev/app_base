@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../backend.factory/backend.factory.csproj" />
-    <ProjectReference Include="../backend.repository/backend.repository.csproj" />
+    <ProjectReference Include="../backend.EventManager/backend.EventManager.csproj" />
   </ItemGroup>
 
 

@@ -1,14 +1,14 @@
 namespace backend.repository.Model;
 
-public class DataItem
+public class DataEntity
 {
     public int Id { get; set; }
     public string Name { get; set; }
     public string Value { get; set; }
 }
 
-public class DataList
+public class DataEntityList
 {
-    public List<DataItem> Data { get; set; } = new List<DataItem>();
+    public List<DataEntity> Data { get; set; } = new List<DataEntity>();
 
 }

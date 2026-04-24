@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\backend.repository\backend.repository.csproj" />
+    <ProjectReference Include="../backend.repository/backend.repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>
