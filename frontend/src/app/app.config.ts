@@ -5,6 +5,7 @@ import { provideStore } from '@ngxs/store';
 import { routes } from './app.routes';
 import { Sidebar } from './components/sidebar/sidebar';
 import { CounterState } from './state/counter.state';
+import { DataState } from './state/data.state';
 
 //components
 import { Home } from './components/pages/home/home';
@@ -16,7 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideHttpClient(),
-    provideStore([CounterState]),
+    provideStore([CounterState, DataState]),
     Home,
     Sidebar,
     Layout,

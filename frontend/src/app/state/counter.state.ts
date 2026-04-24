@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { catchError, tap, throwError } from 'rxjs';
 import { ApiService } from '../services/api.service';
+import { CounterStateModel } from '../interface/counter.interface';
 
 export class IncrementCounter {
   static readonly type = '[Counter] Increment';
@@ -11,13 +12,6 @@ export class LoadApiStatus {
   static readonly type = '[Counter] Load Api Status';
 }
 
-export interface CounterStateModel {
-  count: number;
-  apiMessage: string;
-  serverTime: string;
-  loading: boolean;
-  error: string;
-}
 
 @State<CounterStateModel>({
   name: 'counter',

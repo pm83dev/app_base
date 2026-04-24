@@ -1,1 +1,76 @@
-<p>data works!</p>
+<div class="main-container">
+  <section class="d-flex align-items-center gap-3">
+    <h2>Data Items</h2>
+    <button class="btn btn-success" (click)="addItem()">Add New Item</button>
+  </section>
+  <p class="text-muted">
+    Below is a list of data items fetched from the API. You can edit or delete each item using the
+    actions provided.
+  </p>
+  <section *ngIf="(dataItems$ | async) === null" class="alert alert-info">
+    Loading data items...
+  </section>
+  <section *ngIf="(dataItems$ | async)?.length === 0" class="alert alert-warning">
+    No data items found.
+  </section>
+  <section class="table-responsive">
+    @if (dataItems$ | async; as items) {
+      <table class="table table-dark table-striped table-responsive idx-auto">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of items; track item.id) {
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.value }}</td>
+              <td>
+                <button class="btn btn-sm btn-primary me-4" (click)="editItem(item)">
+                  <i class="bi bi-pencil-square me-2" title="Edit"></i>Edit
+                </button>
+                <button class="btn btn-sm btn-danger" (click)="deleteItem(item)">
+                  <i class="bi bi-trash" title="Delete"></i>Delete
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </section>
+</div>
+
+<!--Modal -->
+<app-modal
+  [isOpen]="showModal"
+  [title]="modalMode === 'edit' ? 'Edit Item' : 'Add New Item'"
+  (closed)="closeModal()"
+  (confirmed)="saveItem()"
+>
+  @if (selectedItem) {
+    <p><strong>ID:</strong> {{ selectedItem.id }}</p>
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input class="form-control" [(ngModel)]="selectedItem.name" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Value</label>
+      <input class="form-control" [(ngModel)]="selectedItem.value" />
+    </div>
+  } @else {
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input class="form-control" [(ngModel)]="newItem.name" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Value</label>
+      <input class="form-control" [(ngModel)]="newItem.value" />
+    </div>
+  }
+</app-modal>

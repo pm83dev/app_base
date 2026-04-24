@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { DataResponseModel } from '../interface/data.interface';
 export interface ApiStatusResponse {
   message: string;
   serverTime: string;
@@ -13,5 +14,9 @@ export class ApiService {
 
   getStatus(): Observable<ApiStatusResponse> {
     return this.http.get<ApiStatusResponse>(`${environment.API_URL}status`);
+  }
+
+  getData(): Observable<DataResponseModel> {
+    return this.http.get<DataResponseModel>(`${environment.API_URL}data`);
   }
 }
