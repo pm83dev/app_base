@@ -1,4 +1,4 @@
-﻿using backend.EventManager.Commands;
+using backend.EventManager.Commands;
 using backend.EventManager.DTOs;
 using backend.EventManager.EventStore;
 using backend.factory.ServiceManager;
@@ -13,6 +13,8 @@ public static class InjectAppServices
     {
         self.AddScoped<DataDLL>();
         self.AddScoped<DataBLL>();
+        self.AddScoped<ProductDLL>();
+        self.AddScoped<ProductBLL>();
         self.AddScoped<ICommands<DeviceEntity>, CommandHandler<DeviceEntity>>();
         self.AddSingleton<IEventStore<DeviceEntity>, InMemoryEventStore<DeviceEntity>>();
         return self;

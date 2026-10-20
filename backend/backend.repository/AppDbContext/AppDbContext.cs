@@ -11,5 +11,6 @@ public class AppDbContext : DbContext
     // Example:
     // public DbSet<YourEntity> YourEntities { get; set; }
     public DbSet<DataEntity> Data { get; set; }  // entity -> tabella DB
+    public DbSet<ProductEntity> Products { get; set; }  // entity -> tabella DB
 
 }
