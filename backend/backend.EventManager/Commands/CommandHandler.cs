@@ -76,6 +76,7 @@ namespace backend.EventManager.Commands
 
             // Pulisci gli eventi non commessi
             aggregateRoot.ClearUncommittedEvents();
+
         }
 
     }

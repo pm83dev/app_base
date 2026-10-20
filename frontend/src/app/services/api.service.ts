@@ -19,4 +19,6 @@ export class ApiService {
   getData(): Observable<DataResponseModel> {
     return this.http.get<DataResponseModel>(`${environment.API_URL}data/get-data`);
   }
+
+
 }

@@ -9,13 +9,13 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
         // Try to resolve the absolute path to appsettings.Development.json
         var basePath = Directory.GetCurrentDirectory();
-        var apiSettingsPath = Path.Combine(basePath, "..", "AppBase.Api", "appsettings.Development.json");
+        var apiSettingsPath = Path.Combine(basePath, "..", "backend.Api", "appsettings.Development.json");
         string connectionString = null;
 
         if (File.Exists(apiSettingsPath))
         {
             var config = new ConfigurationBuilder()
-                .SetBasePath(Path.GetFullPath(Path.Combine(basePath, "..", "AppBase.Api")))
+                .SetBasePath(Path.GetFullPath(Path.Combine(basePath, "..", "backend.Api")))
                 .AddJsonFile("appsettings.Development.json", optional: false)
                 .Build();
             connectionString = config.GetConnectionString("DefaultConnection");
@@ -28,7 +28,7 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
         }
 
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-        optionsBuilder.UseNpgsql(connectionString);
+        optionsBuilder.UseSqlite(connectionString);
         return new AppDbContext(optionsBuilder.Options);
     }
 }

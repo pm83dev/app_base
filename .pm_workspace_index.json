@@ -1,0 +1,677 @@
+{
+  "builtAt": "2026-10-20T15:08:38.053Z",
+  "symbols": [
+    {
+      "name": "LoadApiData",
+      "kind": "class",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 9,
+      "preview": "export class LoadApiData {"
+    },
+    {
+      "name": "AddDataItem",
+      "kind": "class",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 13,
+      "preview": "export class AddDataItem {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 15,
+      "preview": "constructor(public payload: DataItem) {}"
+    },
+    {
+      "name": "UpdateDataItem",
+      "kind": "class",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 18,
+      "preview": "export class UpdateDataItem {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 20,
+      "preview": "constructor(public payload: DataItem) {}"
+    },
+    {
+      "name": "DeleteDataItem",
+      "kind": "class",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 23,
+      "preview": "export class DeleteDataItem {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 25,
+      "preview": "constructor(public payload: number) {} // payload is the ID of the item to delete"
+    },
+    {
+      "name": "DataState",
+      "kind": "service",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 39,
+      "preview": "export class DataState {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 40,
+      "preview": "constructor(private readonly apiService: ApiService) {}"
+    },
+    {
+      "name": "loadApiData",
+      "kind": "method",
+      "file": "frontend/src/app/state/data.state.ts",
+      "line": 63,
+      "preview": "loadApiData(ctx: StateContext<DataResponseModel>) {"
+    },
+    {
+      "name": "IncrementCounter",
+      "kind": "class",
+      "file": "frontend/src/app/state/counter.state.ts",
+      "line": 7,
+      "preview": "export class IncrementCounter {"
+    },
+    {
+      "name": "LoadApiStatus",
+      "kind": "class",
+      "file": "frontend/src/app/state/counter.state.ts",
+      "line": 11,
+      "preview": "export class LoadApiStatus {"
+    },
+    {
+      "name": "CounterState",
+      "kind": "service",
+      "file": "frontend/src/app/state/counter.state.ts",
+      "line": 27,
+      "preview": "export class CounterState {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/state/counter.state.ts",
+      "line": 28,
+      "preview": "constructor(private readonly apiService: ApiService) {}"
+    },
+    {
+      "name": "increment",
+      "kind": "method",
+      "file": "frontend/src/app/state/counter.state.ts",
+      "line": 56,
+      "preview": "increment(ctx: StateContext<CounterStateModel>): void {"
+    },
+    {
+      "name": "loadApiStatus",
+      "kind": "method",
+      "file": "frontend/src/app/state/counter.state.ts",
+      "line": 65,
+      "preview": "loadApiStatus(ctx: StateContext<CounterStateModel>) {"
+    },
+    {
+      "name": "ApiStatusResponse",
+      "kind": "interface",
+      "file": "frontend/src/app/services/api.service.ts",
+      "line": 6,
+      "preview": "export interface ApiStatusResponse {"
+    },
+    {
+      "name": "ApiService",
+      "kind": "service",
+      "file": "frontend/src/app/services/api.service.ts",
+      "line": 12,
+      "preview": "export class ApiService {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/services/api.service.ts",
+      "line": 13,
+      "preview": "constructor(private http: HttpClient) {}"
+    },
+    {
+      "name": "getStatus",
+      "kind": "method",
+      "file": "frontend/src/app/services/api.service.ts",
+      "line": 15,
+      "preview": "getStatus(): Observable<ApiStatusResponse> {"
+    },
+    {
+      "name": "getData",
+      "kind": "method",
+      "file": "frontend/src/app/services/api.service.ts",
+      "line": 19,
+      "preview": "getData(): Observable<DataResponseModel> {"
+    },
+    {
+      "name": "DataItem",
+      "kind": "interface",
+      "file": "frontend/src/app/interface/data.interface.ts",
+      "line": 1,
+      "preview": "export interface DataItem {"
+    },
+    {
+      "name": "DataResponseModel",
+      "kind": "interface",
+      "file": "frontend/src/app/interface/data.interface.ts",
+      "line": 7,
+      "preview": "export interface DataResponseModel {"
+    },
+    {
+      "name": "CounterStateModel",
+      "kind": "interface",
+      "file": "frontend/src/app/interface/counter.interface.ts",
+      "line": 2,
+      "preview": "export interface CounterStateModel {"
+    },
+    {
+      "name": "Sidebar",
+      "kind": "component",
+      "file": "frontend/src/app/components/sidebar/sidebar.ts",
+      "line": 10,
+      "preview": "export class Sidebar {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/components/sidebar/sidebar.ts",
+      "line": 11,
+      "preview": "constructor(private readonly router: Router) {}"
+    },
+    {
+      "name": "navigateTo",
+      "kind": "method",
+      "file": "frontend/src/app/components/sidebar/sidebar.ts",
+      "line": 13,
+      "preview": "navigateTo(path: string): void {"
+    },
+    {
+      "name": "isActive",
+      "kind": "method",
+      "file": "frontend/src/app/components/sidebar/sidebar.ts",
+      "line": 17,
+      "preview": "isActive(path: string): boolean {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "frontend/src/app/components/sidebar/sidebar.ts",
+      "line": 19,
+      "preview": "if (path === '') {"
+    },
+    {
+      "name": "App",
+      "kind": "component",
+      "file": "frontend/src/app/app.ts",
+      "line": 10,
+      "preview": "export class App {}"
+    },
+    {
+      "name": "Modal",
+      "kind": "component",
+      "file": "frontend/src/app/components/common/modal/modal.ts",
+      "line": 9,
+      "preview": "export class Modal {"
+    },
+    {
+      "name": "confirm",
+      "kind": "output",
+      "file": "frontend/src/app/components/common/modal/modal.ts",
+      "line": 17,
+      "preview": "confirm() {"
+    },
+    {
+      "name": "close",
+      "kind": "method",
+      "file": "frontend/src/app/components/common/modal/modal.ts",
+      "line": 21,
+      "preview": "close() {"
+    },
+    {
+      "name": "Header",
+      "kind": "component",
+      "file": "frontend/src/app/components/header/header.ts",
+      "line": 9,
+      "preview": "export class Header {}"
+    },
+    {
+      "name": "Home",
+      "kind": "component",
+      "file": "frontend/src/app/components/pages/home/home.ts",
+      "line": 12,
+      "preview": "export class Home {"
+    },
+    {
+      "name": "Layout",
+      "kind": "component",
+      "file": "frontend/src/app/components/layout/layout.ts",
+      "line": 12,
+      "preview": "export class Layout {}"
+    },
+    {
+      "name": "Data",
+      "kind": "component",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 15,
+      "preview": "export class Data {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 25,
+      "preview": "constructor() {"
+    },
+    {
+      "name": "editItem",
+      "kind": "method",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 30,
+      "preview": "editItem(item: DataItem) {"
+    },
+    {
+      "name": "deleteItem",
+      "kind": "method",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 36,
+      "preview": "deleteItem(item: DataItem) {"
+    },
+    {
+      "name": "addItem",
+      "kind": "method",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 41,
+      "preview": "addItem() {"
+    },
+    {
+      "name": "saveItem",
+      "kind": "method",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 47,
+      "preview": "saveItem() {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 48,
+      "preview": "if (this.modalMode === 'add') {"
+    },
+    {
+      "name": "closeModal",
+      "kind": "method",
+      "file": "frontend/src/app/components/pages/data/data.ts",
+      "line": 56,
+      "preview": "closeModal() {"
+    },
+    {
+      "name": "DataEntity",
+      "kind": "class",
+      "file": "backend/backend.repository/Models/Data.cs",
+      "line": 3,
+      "preview": "public class DataEntity"
+    },
+    {
+      "name": "DataEntityList",
+      "kind": "class",
+      "file": "backend/backend.repository/Models/Data.cs",
+      "line": 10,
+      "preview": "public class DataEntityList"
+    },
+    {
+      "name": "AppDbContextFactory",
+      "kind": "class",
+      "file": "backend/backend.repository/AppDbContext/AppDbContextFactory.cs",
+      "line": 6,
+      "preview": "public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>"
+    },
+    {
+      "name": "CreateDbContext",
+      "kind": "method",
+      "file": "backend/backend.repository/AppDbContext/AppDbContextFactory.cs",
+      "line": 8,
+      "preview": "public AppDbContext CreateDbContext(string[] args)"
+    },
+    {
+      "name": "AppDbContext",
+      "kind": "class",
+      "file": "backend/backend.repository/AppDbContext/AppDbContext.cs",
+      "line": 4,
+      "preview": "public class AppDbContext : DbContext"
+    },
+    {
+      "name": "DataBLL",
+      "kind": "class",
+      "file": "backend/backend.factory/ServiceManager/DataBLL.cs",
+      "line": 6,
+      "preview": "public class DataBLL"
+    },
+    {
+      "name": "GetDataAsync",
+      "kind": "method",
+      "file": "backend/backend.factory/ServiceManager/DataBLL.cs",
+      "line": 15,
+      "preview": "public async Task<DataModelDtoList> GetDataAsync()"
+    },
+    {
+      "name": "AddDataAsync",
+      "kind": "method",
+      "file": "backend/backend.factory/ServiceManager/DataBLL.cs",
+      "line": 22,
+      "preview": "public async Task<DataModelDto> AddDataAsync(DataModelDto data)"
+    },
+    {
+      "name": "UpdateDataAsync",
+      "kind": "method",
+      "file": "backend/backend.factory/ServiceManager/DataBLL.cs",
+      "line": 29,
+      "preview": "public async Task<DataModelDto> UpdateDataAsync(int id, DataModelDto data)"
+    },
+    {
+      "name": "DeleteDataAsync",
+      "kind": "method",
+      "file": "backend/backend.factory/ServiceManager/DataBLL.cs",
+      "line": 36,
+      "preview": "public async Task<bool> DeleteDataAsync(int id)"
+    },
+    {
+      "name": "DataDLL",
+      "kind": "class",
+      "file": "backend/backend.repository/DataManager/DataDLL.cs",
+      "line": 6,
+      "preview": "public class DataDLL"
+    },
+    {
+      "name": "AddDataAsync",
+      "kind": "method",
+      "file": "backend/backend.repository/DataManager/DataDLL.cs",
+      "line": 14,
+      "preview": "public async Task<DataEntity> AddDataAsync(DataEntity entity)"
+    },
+    {
+      "name": "DeleteDataAsync",
+      "kind": "method",
+      "file": "backend/backend.repository/DataManager/DataDLL.cs",
+      "line": 29,
+      "preview": "public async Task<bool> DeleteDataAsync(int id)"
+    },
+    {
+      "name": "GetDataAsync",
+      "kind": "method",
+      "file": "backend/backend.repository/DataManager/DataDLL.cs",
+      "line": 49,
+      "preview": "public async Task<DataEntityList> GetDataAsync()"
+    },
+    {
+      "name": "UpdateDataAsync",
+      "kind": "method",
+      "file": "backend/backend.repository/DataManager/DataDLL.cs",
+      "line": 63,
+      "preview": "public async Task<DataEntity> UpdateDataAsync(int id, DataEntity entity)"
+    },
+    {
+      "name": "InjectAppServices",
+      "kind": "class",
+      "file": "backend/backend.factory/InjectApplicationServices.cs",
+      "line": 10,
+      "preview": "public static class InjectAppServices"
+    },
+    {
+      "name": "TestController",
+      "kind": "class",
+      "file": "backend/backend.Api/Controllers/TestController.cs",
+      "line": 5,
+      "preview": "public class TestController : ControllerBase"
+    },
+    {
+      "name": "Get",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/TestController.cs",
+      "line": 8,
+      "preview": "public IActionResult Get()"
+    },
+    {
+      "name": "EventController",
+      "kind": "class",
+      "file": "backend/backend.Api/Controllers/EventController.cs",
+      "line": 10,
+      "preview": "public class EventController : ControllerBase"
+    },
+    {
+      "name": "Create",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/EventController.cs",
+      "line": 22,
+      "preview": "public async Task<IActionResult> Create([FromBody] DeviceEntity entity)"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/EventController.cs",
+      "line": 37,
+      "preview": "public async Task<IActionResult> Update([FromBody] DeviceEntity entity)"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/EventController.cs",
+      "line": 44,
+      "preview": "public async Task<IActionResult> Delete([FromBody] Guid entityId)"
+    },
+    {
+      "name": "GetAllEvents",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/EventController.cs",
+      "line": 52,
+      "preview": "public async Task<IActionResult> GetAllEvents()"
+    },
+    {
+      "name": "DataController",
+      "kind": "class",
+      "file": "backend/backend.Api/Controllers/DataController.cs",
+      "line": 7,
+      "preview": "public class DataController : ControllerBase"
+    },
+    {
+      "name": "GetData",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/DataController.cs",
+      "line": 18,
+      "preview": "public async Task<IActionResult> GetData()"
+    },
+    {
+      "name": "AddData",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/DataController.cs",
+      "line": 25,
+      "preview": "public async Task<IActionResult> AddData([FromBody] DataModelDto data)"
+    },
+    {
+      "name": "UpdateData",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/DataController.cs",
+      "line": 32,
+      "preview": "public async Task<IActionResult> UpdateData(int id, [FromBody] DataModelDto data)"
+    },
+    {
+      "name": "DeleteData",
+      "kind": "method",
+      "file": "backend/backend.Api/Controllers/DataController.cs",
+      "line": 41,
+      "preview": "public async Task<IActionResult> DeleteData(int id)"
+    },
+    {
+      "name": "DataModelDto",
+      "kind": "class",
+      "file": "backend/backend.factory/DTOs/DataDto.cs",
+      "line": 3,
+      "preview": "public class DataModelDto"
+    },
+    {
+      "name": "DataModelDtoList",
+      "kind": "class",
+      "file": "backend/backend.factory/DTOs/DataDto.cs",
+      "line": 10,
+      "preview": "public class DataModelDtoList"
+    },
+    {
+      "name": "DeviceDto",
+      "kind": "class",
+      "file": "backend/backend.EventManager/DTOs/DeviceDto.cs",
+      "line": 4,
+      "preview": "public class DeviceDto"
+    },
+    {
+      "name": "Class1",
+      "kind": "class",
+      "file": "backend/backend.EventManager/Class1.cs",
+      "line": 3,
+      "preview": "public class Class1"
+    },
+    {
+      "name": "ICommands",
+      "kind": "interface",
+      "file": "backend/backend.EventManager/Commands/ICommands.cs",
+      "line": 6,
+      "preview": "public interface ICommands<TEntity> where TEntity : IEntity"
+    },
+    {
+      "name": "HandleCreateAsync",
+      "kind": "method",
+      "file": "backend/backend.EventManager/Commands/ICommands.cs",
+      "line": 8,
+      "preview": "public Task HandleCreateAsync(TEntity entity);"
+    },
+    {
+      "name": "HandleUpdateAsync",
+      "kind": "method",
+      "file": "backend/backend.EventManager/Commands/ICommands.cs",
+      "line": 9,
+      "preview": "public Task HandleUpdateAsync(TEntity entity);"
+    },
+    {
+      "name": "HandleDeleteAsync",
+      "kind": "method",
+      "file": "backend/backend.EventManager/Commands/ICommands.cs",
+      "line": 11,
+      "preview": "public Task HandleDeleteAsync(TEntity entity);"
+    },
+    {
+      "name": "CommandHandler",
+      "kind": "class",
+      "file": "backend/backend.EventManager/Commands/CommandHandler.cs",
+      "line": 7,
+      "preview": "public class CommandHandler<TEntity> : ICommands<TEntity> where TEntity : IEntity"
+    },
+    {
+      "name": "HandleCreateAsync",
+      "kind": "method",
+      "file": "backend/backend.EventManager/Commands/CommandHandler.cs",
+      "line": 16,
+      "preview": "public async Task HandleCreateAsync(TEntity entity)"
+    },
+    {
+      "name": "HandleUpdateAsync",
+      "kind": "method",
+      "file": "backend/backend.EventManager/Commands/CommandHandler.cs",
+      "line": 41,
+      "preview": "public async Task HandleUpdateAsync(TEntity entity)"
+    },
+    {
+      "name": "HandleDeleteAsync",
+      "kind": "method",
+      "file": "backend/backend.EventManager/Commands/CommandHandler.cs",
+      "line": 61,
+      "preview": "public async Task HandleDeleteAsync(TEntity entity)"
+    },
+    {
+      "name": "Event",
+      "kind": "class",
+      "file": "backend/backend.EventManager/Events/Event.cs",
+      "line": 5,
+      "preview": "public abstract class Event"
+    },
+    {
+      "name": "DeletedEvent",
+      "kind": "class",
+      "file": "backend/backend.EventManager/Events/DeletedEvent.cs",
+      "line": 3,
+      "preview": "public class DeletedEvent : Event"
+    },
+    {
+      "name": "CreatedEvent",
+      "kind": "class",
+      "file": "backend/backend.EventManager/Events/CreatedEvent.cs",
+      "line": 4,
+      "preview": "public class CreatedEvent : Event"
+    },
+    {
+      "name": "UpdatedEvent",
+      "kind": "class",
+      "file": "backend/backend.EventManager/Events/UpdatedEvent.cs",
+      "line": 5,
+      "preview": "public class UpdatedEvent : Event"
+    },
+    {
+      "name": "DeviceEntity",
+      "kind": "class",
+      "file": "backend/backend.EventManager/Entity/DeviceEntity.cs",
+      "line": 5,
+      "preview": "public class DeviceEntity : IEntity"
+    },
+    {
+      "name": "IEntity",
+      "kind": "interface",
+      "file": "backend/backend.EventManager/Entity/IEntity.cs",
+      "line": 3,
+      "preview": "public interface IEntity"
+    },
+    {
+      "name": "AggregateRoot",
+      "kind": "class",
+      "file": "backend/backend.EventManager/AggregateRoot/AggregateRoot.cs",
+      "line": 6,
+      "preview": "public class AggregateRoot"
+    },
+    {
+      "name": "ApplyEvent",
+      "kind": "method",
+      "file": "backend/backend.EventManager/AggregateRoot/AggregateRoot.cs",
+      "line": 16,
+      "preview": "public void ApplyEvent(Event @event)"
+    },
+    {
+      "name": "ClearUncommittedEvents",
+      "kind": "method",
+      "file": "backend/backend.EventManager/AggregateRoot/AggregateRoot.cs",
+      "line": 59,
+      "preview": "public void ClearUncommittedEvents()"
+    },
+    {
+      "name": "InMemoryEventStore",
+      "kind": "class",
+      "file": "backend/backend.EventManager/EventStore/InMemoryEventStore.cs",
+      "line": 6,
+      "preview": "public class InMemoryEventStore<TEntity> : IEventStore<TEntity> where TEntity : class, IEntity"
+    },
+    {
+      "name": "SaveEventStoreAsync",
+      "kind": "method",
+      "file": "backend/backend.EventManager/EventStore/InMemoryEventStore.cs",
+      "line": 10,
+      "preview": "public Task SaveEventStoreAsync(Event @event)"
+    },
+    {
+      "name": "IEventStore",
+      "kind": "interface",
+      "file": "backend/backend.EventManager/EventStore/IEventStore.cs",
+      "line": 7,
+      "preview": "public interface IEventStore<TEntity> where TEntity : IEntity"
+    }
+  ]
+}
